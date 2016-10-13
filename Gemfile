@@ -13,3 +13,5 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 gem 'nd_employee_lookup', path: '../nd_employee_lookup'
+
+gem 'capybara-webkit', git: 'git@github.com:kingdonb/capybara-webkit.git'

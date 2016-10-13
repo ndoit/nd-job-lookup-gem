@@ -8,6 +8,10 @@ require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+# manage secrets with dotenv
+require 'dotenv'
+Dotenv.load ".env.local", ".env.#{Rails.env}"
+
 Bundler.require(*Rails.groups)
 require "nd_job_lookup"
 
