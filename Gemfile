@@ -12,4 +12,4 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-
+gem 'nd_employee_lookup', path: '../nd_employee_lookup'
