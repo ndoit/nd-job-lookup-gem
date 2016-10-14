@@ -1,5 +1,6 @@
 module NdJobLookup
   class Engine < ::Rails::Engine
+    config.autoload_paths += %W(#{config.root}/lib)
     isolate_namespace NdJobLookup
 
     config.assets.paths << File.expand_path("../../assets/stylesheets", __FILE__)
