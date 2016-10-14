@@ -19,7 +19,7 @@ module NdJobLookup
 
     def save
     end
-    
+
     def save!
     end
 
