@@ -38,6 +38,13 @@ module NdJobLookup
       clean_params = sanitize_params(params)
       url_open = open lookup_url_from_params(clean_params)
       url_open.read
+
+    rescue => e
+      case e
+      when OpenURI::HTTPError
+        # raise e unless e.io.status == "404"
+        return JSON.parse('[{ "Job": "None" }]').to_json
+      end
     end
 
     def self.sanitize_params(params)
