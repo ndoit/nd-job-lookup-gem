@@ -1,42 +1,43 @@
 div.large-12.medium-12.small-12.columns
   div.row
-    div.large-2.medium-2.small-2.columns
-      label Position/Suffix:
-    div.large-10.medium-4.small-4.columns.end
-      span.job_posn #{job['posn']}/#{job['suffix']}
-  div.row
-    div.large-4.columns
+    div.large-4.medium-6.small-12.columns
       div.row
-        div.large-3.medium-1.small-1.columns
+        div.small-3.columns
           label Title:
-        div.large-9.medium-4.small-4.columns
+        div.small-9.columns
           span.job_title #{job['title']}
       div.row
-        div.large-3.medium-1.small-1.columns
+        div.small-3.columns
           label Orgn:
-        div.large-9.medium-4.small-4.columns
+        div.small-9.columns
           span.job_orgn_code #{job['orgn_code']}
           |  - 
           span.job_orgn_title #{job['orgn_title']}
-    div.large-4.columns
+    div.large-4.medium-6.small-12.columns
       div.row
-        div.large-3.medium-1.small-1.columns
+        div.small-3.columns
           label Type:
-        div.large-9.medium-2.small-2.columns
+        div.small-9.columns
           span.job_primary #{job['primary']}
       div.row
-        div.large-3.medium-1.small-1.columns
+        div.small-3.columns
           label Status:
-        div.large-9.medium-2.small-2.columns
+        div.small-9.columns
           span.job_status #{job['status_description']}
-    div.large-4.columns
       div.row
-        div.large-3.medium-1.small-1.columns
+        div.small-3.columns
+          label Position / Suffix:
+        div.small-9.columns
+          span.job_posn style="vertical-align: text-bottom"
+          | #{job['posn']}/#{job['suffix']}
+    div.large-4.medium-6.small-12.columns
+      div.row
+        div.small-3.columns
           label Start:
-        div.large-9.medium-2.small-2.columns.end
+        div.small-9.columns.end
           span.job_start #{job['start_date']}
       div.row
-        div.large-3.medium-1.small-1.columns
+        div.small-3.columns
           label End:
-        div.large-9.medium-2.small-2.columns.end
+        div.small-9.columns.end
           span.job_end #{job['end_date']}
