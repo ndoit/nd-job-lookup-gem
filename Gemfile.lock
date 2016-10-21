@@ -1,4 +1,13 @@
 GIT
+  remote: git@bitbucket.org:nd-oit/nd-employee-lookup-gem.git
+  revision: d04c14adb6d5b83554e160a2ba2aa7ccac86d843
+  specs:
+    nd_employee_lookup (0.0.2)
+      foundation-rails (~> 5.4.3.0)
+      jquery-rails (~> 4.2.1)
+      rails (~> 4.2.7.1)
+
+GIT
   remote: git@github.com:kingdonb/capybara-webkit.git
   revision: 464f57c9d228ec15ed021c5b6a6eb0c4c44b3b0d
   specs:
@@ -7,17 +16,9 @@ GIT
       json
 
 PATH
-  remote: ../nd_employee_lookup
-  specs:
-    nd_employee_lookup (0.0.1)
-      foundation-rails (~> 5.4.3.0)
-      jquery-rails (~> 4.2.1)
-      rails (~> 4.2.7.1)
-
-PATH
   remote: .
   specs:
-    nd_job_lookup (0.0.1)
+    nd_job_lookup (0.0.2)
       foundation-rails (~> 5.4.3.0)
       jquery-rails (~> 4.2.1)
       rails (~> 4.2.7.1)
