@@ -1,5 +1,8 @@
-<ul>
-  <% jobs.each do |j| %>
-    <li><span class="employee_job"><%= p j %></span></li>
+<div id="jobs_list">
+  <% jobs.each do |job| %>
+    <div class="employee_job">
+      <%= render partial: 'nd_job_lookup/hrpy_employee_job',
+        locals: { job: job } %>
+    </div>
   <% end %>
-</ul>
+</div>
