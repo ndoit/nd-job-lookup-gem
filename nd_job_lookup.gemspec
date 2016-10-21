@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   #s.add_dependency "nd_employee_lookup", "~> 0.0.2"
   s.add_dependency "jquery-rails", "~> 4.2.1"
   s.add_dependency "foundation-rails", "~> 5.4.3.0"
+  s.add_dependency "slim", "~> 3.0.7"
+  s.add_dependency "slim-rails", "~> 3.1.1"
 
   s.add_development_dependency 'dotenv'
   s.add_development_dependency 'rspec-rails', '~> 3.5.0'
