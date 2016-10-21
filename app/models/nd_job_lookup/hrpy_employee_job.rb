@@ -42,7 +42,7 @@ module NdJobLookup
     rescue => e
       case e
       when OpenURI::HTTPError
-        # raise e unless e.io.status == "404"
+        raise e unless e.io.status[0] == "404"
         return JSON.parse('[{ "Job": "None" }]').to_json
       end
     end
