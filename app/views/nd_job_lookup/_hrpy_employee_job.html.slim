@@ -1,67 +1,42 @@
-<div class="large-12 medium-12 small-12 columns">
-  <div class="row">
-    <div class="large-2 medium-2 small-2 columns">
-      <label>Position/Suffix:</label>
-    </div>
-    <div class="large-10 medium-4 small-4 columns end">
-      <span class="job_posn"><%= job['posn'] %>/<%= job['suffix'] %></span>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-4 columns">
-      <div class="row">
-        <div class="large-3 medium-1 small-1 columns">
-          <label>Title:</label>
-        </div>
-        <div class="large-9 medium-4 small-4 columns">
-          <span class="job_title"><%= job['title'] %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-3 medium-1 small-1 columns">
-          <label>Orgn:</label>
-        </div>
-        <div class="large-9 medium-4 small-4 columns">
-          <span class="job_orgn_code"><%= job['orgn_code'] %></span> - 
-          <span class="job_orgn_title"><%= job['orgn_title'] %></span>
-        </div>
-      </div>
-    </div>
-    <div class="large-4 columns">
-      <div class="row">
-        <div class="large-3 medium-1 small-1 columns">
-          <label>Type:</label>
-        </div>
-        <div class="large-9 medium-2 small-2 columns">
-          <span class="job_primary"><%= job['primary'] %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-3 medium-1 small-1 columns">
-          <label>Status:</label>
-        </div>
-        <div class="large-9 medium-2 small-2 columns">
-          <span class="job_status"><%= job['status_description'] %></span>
-        </div>
-      </div>
-    </div>
-    <div class="large-4 columns">
-      <div class="row">
-        <div class="large-3 medium-1 small-1 columns">
-          <label>Start:</label>
-        </div>
-        <div class="large-9 medium-2 small-2 columns end">
-          <span class="job_start"><%= job['start_date'] %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-3 medium-1 small-1 columns">
-          <label>End:</label>
-        </div>
-        <div class="large-9 medium-2 small-2 columns end">
-          <span class="job_end"><%= job['end_date'] %></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+div class="large-12 medium-12 small-12 columns"
+  div class="row"
+    div class="large-2 medium-2 small-2 columns"
+      label Position/Suffix:
+    div class="large-10 medium-4 small-4 columns end"
+      span class="job_posn" #{job['posn']}/#{job['suffix']}
+  div class="row"
+    div class="large-4 columns"
+      div class="row"
+        div class="large-3 medium-1 small-1 columns"
+          label Title:
+        div class="large-9 medium-4 small-4 columns"
+          span class="job_title" #{job['title']}
+      div class="row"
+        div class="large-3 medium-1 small-1 columns"
+          label Orgn:
+        div class="large-9 medium-4 small-4 columns"
+          span class="job_orgn_code" #{job['orgn_code']}
+          |  - 
+          span class="job_orgn_title" #{job['orgn_title']}
+    div class="large-4 columns"
+      div class="row"
+        div class="large-3 medium-1 small-1 columns"
+          label Type:
+        div class="large-9 medium-2 small-2 columns"
+          span class="job_primary" #{job['primary']}
+      div class="row"
+        div class="large-3 medium-1 small-1 columns"
+          label Status:
+        div class="large-9 medium-2 small-2 columns"
+          span class="job_status" #{job['status_description']}
+    div class="large-4 columns"
+      div class="row"
+        div class="large-3 medium-1 small-1 columns"
+          label Start:
+        div class="large-9 medium-2 small-2 columns end"
+          span class="job_start" #{job['start_date']}
+      div class="row"
+        div class="large-3 medium-1 small-1 columns"
+          label End:
+        div class="large-9 medium-2 small-2 columns end"
+          span class="job_end" #{job['end_date']}
