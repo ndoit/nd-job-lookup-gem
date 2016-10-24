@@ -1,4 +1,13 @@
 <div id="jobs_list">
+  <% if jobs.count == 1 && jobs[0]["Job"] == "None" %>
+    <div class="employee_job">
+      <div class="row">
+        <div class="column">
+          No active job found.
+        </div>
+      </div>
+    </div>
+  <% else %>
   <% jobs.each do |job| %>
     <div class="employee_job">
       <div class="row">
@@ -6,5 +15,6 @@
         locals: { job: job } %>
       </div>
     </div>
+  <% end %>
   <% end %>
 </div>
