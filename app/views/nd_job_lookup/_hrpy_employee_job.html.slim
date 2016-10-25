@@ -13,31 +13,31 @@ div.large-12.medium-12.small-12.columns
           span.job_orgn_code #{job['orgn_code']}
           |  - 
           span.job_orgn_title #{job['orgn_title']}
-    div.large-3.medium-6.small-12.columns
-      div.row
-        div.small-3.columns
-          label Type:
-        div.small-9.columns
-          span.job_primary #{job['primary']}
-      div.row
-        div.small-3.columns
-          label Status:
-        div.small-9.columns
-          span.job_status #{job['status_description']}
-      div.row
-        div.small-3.columns
-          label Position /Suffix:
-        div.small-9.columns
-          span.job_posn style="vertical-align: text-bottom"
-            | #{job['posn']}/#{job['suffix']}
     div.large-4.medium-6.small-12.columns
       div.row
-        div.small-3.columns
+        div.large-5.medium-4.small-3.columns
+          label Type:
+        div.large-7.medium-8.small-9.columns
+          span.job_primary #{job['primary']}
+      div.row
+        div.large-5.medium-4.small-3.columns
+          label Status:
+        div.large-7.medium-8.small-9.columns
+          span.job_status #{job['status_description']}
+      div.row
+        div.large-5.medium-4.small-3.columns
+          label Position/Suffix:
+        div.large-7.medium-8.small-9.columns
+          span.job_posn style="vertical-align: text-bottom"
+            | #{job['posn']}/#{job['suffix']}
+    div.large-3.medium-6.small-12.columns
+      div.row
+        div.medium-4.small-3.columns
           label Start:
-        div.small-9.columns.end
+        div.medium-8.small-9.columns.end
           span.job_start #{job['start_date']}
       div.row
-        div.small-3.columns
+        div.medium-4.small-3.columns
           label End:
-        div.small-9.columns.end
+        div.medium-8.small-9.columns.end
           span.job_end #{job['end_date']}
