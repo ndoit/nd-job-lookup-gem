@@ -11,6 +11,17 @@
   <% jobs.each_with_index do |job, index| %>
     <div class="employee_job">
       <div class="row">
+      <%
+        # FIXME: this should be done with a helper, probably?
+        # Not sure if views can be used in partials like we are using this one...
+        # Safely re-parse and format dates which may be blank
+        job['start_date'] = job['start_date'].blank? ?
+          '' :
+          Date.strptime(job['start_date'], '%F').strftime("%-m/%-d/%Y")
+        job['end_date'] = job['end_date'].blank? ?
+          '' :
+          Date.strptime(job['end_date'], '%F').strftime("%-m/%-d/%Y")
+      %>
       <%= render partial: 'nd_job_lookup/hrpy_employee_job',
         locals: { job: job } %>
       </div>
