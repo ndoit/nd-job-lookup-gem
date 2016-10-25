@@ -1,19 +1,19 @@
 div.large-12.medium-12.small-12.columns
   div.row
-    div.large-5.medium-6.small-12.columns
+    div.large-5.medium-7.small-12.columns
       div.row
-        div.small-3.columns
+        div.large-4.small-3.columns
           label Title:
-        div.small-9.columns
+        div.large-8.small-9.columns
           span.job_title #{job['title']}
       div.row
-        div.small-3.columns
-          label Orgn:
-        div.small-9.columns
+        div.large-4.small-3.columns
+          label Position&nbsp;Orgn:
+        div.large-8.small-9.columns
           span.job_orgn_code #{job['orgn_code']}
           |  - 
           span.job_orgn_title #{job['orgn_title']}
-    div.large-4.medium-6.small-12.columns
+    div.large-4.medium-5.small-12.columns
       div.row
         div.large-5.medium-4.small-3.columns
           label Type:
@@ -30,7 +30,7 @@ div.large-12.medium-12.small-12.columns
         div.large-7.medium-8.small-9.columns
           span.job_posn style="vertical-align: text-bottom"
             | #{job['posn']}/#{job['suffix']}
-    div.large-3.medium-6.small-12.columns
+    div.large-3.medium-5.small-12.columns
       div.row
         div.medium-4.small-3.columns
           label Start:
