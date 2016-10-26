@@ -14,6 +14,7 @@ Dotenv.load ".env.local", ".env.#{Rails.env}"
 
 Bundler.require(*Rails.groups)
 require "nd_job_lookup"
+require "slim-rails"
 
 module Dummy
   class Application < Rails::Application
