@@ -2,6 +2,32 @@ require 'sinatra/base'
 require 'date'
 
 class FakeHrPy < Sinatra::Base
+  get '/employee/v1/?:status?/l/:last_name/:first_name' do
+    case params['status']
+    when 'active-incnew'
+      case params['last_name'].upcase
+      when 'MURPHY'
+        case params['first_name'].upcase
+        when 'B'
+          json_response 200, 'bmurphy.json'
+        when 'BARBARA'
+          json_response 200, 'barbaramurphy.json'
+        when 'BONITA'
+          json_response 200, 'bonitamurphy.json'
+        else
+          json_response 404, 'none.json'
+        end
+      else
+        json_response 404, 'none.json'
+      end
+    else
+      json_response 404, 'none.json'
+    end
+  end
+  get '/employee/v1/?:status?/l/:last_name' do
+  end
+  get '/employee/v1/?:status?/:search_string' do
+  end
   # get '/employee/v1/l/:last_name' do
   #   json_response 200, 'employees.json'
   # end
@@ -62,6 +88,8 @@ class FakeHrPy < Sinatra::Base
       elsif start.kind_of?(Date)
         json_response 200, 'grad_stipend_history.json'
       end
+    when "1194830"
+      json_response 404, 'none.json'
     else
       json_response 404, 'none.json'
     end
