@@ -1,0 +1,7 @@
+<%= render partial: 'nd_employee_lookup/employee_show', locals: { employee: @employee } %>
+<div class="row">
+  <h2>Jobs</h2>
+</div>
+<div class="row">
+  <%= render partial: 'nd_job_lookup/job_lookup/jobs_display', locals: { jobs: @employee_jobs } %>
+</div>

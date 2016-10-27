@@ -29,4 +29,15 @@ feature 'External request' do
     response = JSON.load(Net::HTTP.get(uri))
     expect(response.count).to eq 1
   end
+  it 'queries HRPY API for a person with no job' do
+    uri = URI("#{ENV['HRPY_API_BASE']}/job/v1/1194830/2016-08-15")
+    response = JSON.load(Net::HTTP.get(uri))
+    expect(response[0]['Job']).to eq 'None'
+  end
+  it 'queries HRPY API for a person with two jobs' do
+    uri = URI("#{ENV['HRPY_API_BASE']}/job/v1/300055/2016-10-27")
+    response = JSON.load(Net::HTTP.get(uri))
+    expect(response[0].key? "Job").to be false
+    expect(response.count).to eq 2
+  end
 end
