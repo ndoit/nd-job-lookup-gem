@@ -16,8 +16,13 @@ feature 'JavaScript search controller' do
     expect(job).to have_selector('.job_title', text: 'Surviving Spouse Administrator')
   end
   it 'should find a person with more than one active job', js: true do
-    pending "the job-lookup is implemented abstractly and does not provide show"
-    raise Error
+    visit '/job-lookup/search'
+    fill_in 'nd_employee_lookup_net_id', with: '900000381'
+    find('#b_nd_employee_lookup_find').click
+
+    jobs = find('#jobs_list')
+    expect(jobs).to have_selector('.job_title', text: 'Food Prod Kitchen Associate')
+    expect(jobs).to have_selector('.job_title', text: 'Retired Staff')
   end
   it 'should show a message and not error when a person has no job', js: true do
     visit '/job-lookup/search'

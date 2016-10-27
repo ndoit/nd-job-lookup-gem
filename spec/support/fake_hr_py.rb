@@ -15,18 +15,29 @@ class FakeHrPy < Sinatra::Base
         when 'BONITA'
           json_response 200, 'bonitamurphy.json'
         else
-          json_response 404, 'none.json'
+          json_response 404, 'no_emp.json'
         end
       else
-        json_response 404, 'none.json'
+        json_response 404, 'no_emp.json'
       end
     else
-      json_response 404, 'none.json'
+      json_response 404, 'no_emp.json'
     end
   end
   get '/employee/v1/?:status?/l/:last_name' do
   end
   get '/employee/v1/?:status?/:search_string' do
+    case params['status']
+    when 'active-incnew'
+      case params['search_string']
+      when '900000381'
+        json_response 200, 'jmodos.json'
+      else
+        json_response 404, 'no_emp.json'
+      end
+    else
+      json_response 404, 'no_emp.json'
+    end
   end
   # get '/employee/v1/l/:last_name' do
   #   json_response 200, 'employees.json'
@@ -76,6 +87,12 @@ class FakeHrPy < Sinatra::Base
     start = Date.parse(params['start_date'])
 
     case pidm
+    when "300055"
+      if start >= Date.new(2014,4,19)
+        json_response 200, 'two_jobs.json'
+      else
+        json_response 404, 'none.json'
+      end
     when "320891"
       if start.kind_of?(Date)
         json_response 200, 'retiree_spouse.json'
