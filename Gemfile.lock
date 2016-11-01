@@ -17,7 +17,7 @@ PATH
 PATH
   remote: .
   specs:
-    nd_job_lookup (0.0.13)
+    nd_job_lookup (0.1.0)
       foundation-rails (~> 5.4.3.0)
       jquery-rails (~> 4.2.1)
       rails (~> 4.2.7.1)
