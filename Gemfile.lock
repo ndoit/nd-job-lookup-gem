@@ -9,7 +9,7 @@ GIT
 PATH
   remote: ../nd_employee_lookup
   specs:
-    nd_employee_lookup (0.1.0)
+    nd_employee_lookup (0.1.1)
       foundation-rails (~> 5.4.3.0)
       jquery-rails (~> 4.2.1)
       rails (~> 4.2.7.1)
@@ -17,7 +17,7 @@ PATH
 PATH
   remote: .
   specs:
-    nd_job_lookup (0.1.0)
+    nd_job_lookup (0.1.1)
       foundation-rails (~> 5.4.3.0)
       jquery-rails (~> 4.2.1)
       rails (~> 4.2.7.1)
