@@ -17,10 +17,10 @@
         # Safely re-parse and format dates which may be blank
         job['start_date'] = job['start_date'].blank? ?
           '' :
-          Date.strptime(job['start_date'], '%F').strftime("%-m/%-d/%Y")
+          Date.strptime(job['start_date'].to_s, '%F').strftime("%-m/%-d/%Y")
         job['end_date'] = job['end_date'].blank? ?
           '' :
-          Date.strptime(job['end_date'], '%F').strftime("%-m/%-d/%Y")
+          Date.strptime(job['end_date'].to_s, '%F').strftime("%-m/%-d/%Y")
       %>
       <%= render partial: 'nd_job_lookup/hrpy_employee_job',
         locals: { job: job } %>
