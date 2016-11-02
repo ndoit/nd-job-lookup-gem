@@ -38,9 +38,9 @@ div.large-12.medium-12.small-12.columns
         div.medium-4.small-3.columns
           label Start:
         div.medium-8.small-9.columns.end
-          span.job_start #{job['start_date']}
+          span.job_start #{job['start_date'].try(:strftime, "%-m/%-d/%Y")}
       div.row
         div.medium-4.small-3.columns
           label End:
         div.medium-8.small-9.columns.end
-          span.job_end #{job['end_date']}
+          span.job_end #{job['end_date'].try(:strftime, "%-m/%-d/%Y")}
