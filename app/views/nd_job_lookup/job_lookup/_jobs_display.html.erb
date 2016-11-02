@@ -1,5 +1,5 @@
 <div id="jobs_list">
-  <% if jobs.count == 0 %>
+  <% unless jobs.any? %>
     <div class="employee_job">
       <div class="row">
         <div class="column">
@@ -26,7 +26,7 @@
         locals: { job: job } %>
       </div>
     </div>
-    <% if jobs.count > index + 1 %>
+    <% if jobs.to_a.count > index + 1 %>
       <br />
     <% end %>
   <% end %>
