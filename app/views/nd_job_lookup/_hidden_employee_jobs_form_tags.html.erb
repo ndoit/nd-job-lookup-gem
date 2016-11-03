@@ -1,1 +1,21 @@
-<!-- no content -->
+<%= form.fields_for employee do |e| %>
+  <%= e.hidden_field :net_id %>
+  <%= e.hidden_field :nd_id %>
+  <%= e.hidden_field :last_name %>
+  <%= e.hidden_field :first_name %>
+  <%= e.hidden_field :pidm %>
+  <%= e.hidden_field :home_orgn %>
+  <%= e.hidden_field :home_orgn_desc %>
+  <%= e.hidden_field :primary_title %>
+  <%= e.fields_for :employee_jobs do |j| %>
+    <%= j.hidden_field :title %>
+    <%= j.hidden_field :orgn_code %>
+    <%= j.hidden_field :orgn_title %>
+    <%= j.hidden_field :primary %>
+    <%= j.hidden_field :status %>
+    <%= j.hidden_field :posn %>
+    <%= j.hidden_field :suffix %>
+    <%= j.hidden_field :start_date %>
+    <%= j.hidden_field :end_date %>
+  <% end %>
+<% end %>
