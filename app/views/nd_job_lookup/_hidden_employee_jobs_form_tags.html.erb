@@ -1,11 +1,21 @@
-<% employee_jobs.each_with_index do |job, index| %>
-  <%= hidden_field_tag "job_#{index}_title", job['title'] %>
-  <%= hidden_field_tag "job_#{index}_orgn_code", job['orgn_code'] %>
-  <%= hidden_field_tag "job_#{index}_orgn_title", job['orgn_title'] %>
-  <%= hidden_field_tag "job_#{index}_primary", job['primary'] %>
-  <%= hidden_field_tag "job_#{index}_status", job['status'] %>
-  <%= hidden_field_tag "job_#{index}_posn", job['posn'] %>
-  <%= hidden_field_tag "job_#{index}_suffix", job['suffix'] %>
-  <%= hidden_field_tag "job_#{index}_start", job['start'] %>
-  <%= hidden_field_tag "job_#{index}_end", job['end'] %>
+<%= form.fields_for employee do |e| %>
+  <%= e.hidden_field :net_id %>
+  <%= e.hidden_field :nd_id %>
+  <%= e.hidden_field :last_name %>
+  <%= e.hidden_field :first_name %>
+  <%= e.hidden_field :pidm %>
+  <%= e.hidden_field :home_orgn %>
+  <%= e.hidden_field :home_orgn_desc %>
+  <%= e.hidden_field :primary_title %>
+  <%= e.fields_for :employee_jobs do |j| %>
+    <%= j.hidden_field :title %>
+    <%= j.hidden_field :orgn_code %>
+    <%= j.hidden_field :orgn_title %>
+    <%= j.hidden_field :primary %>
+    <%= j.hidden_field :status %>
+    <%= j.hidden_field :posn %>
+    <%= j.hidden_field :suffix %>
+    <%= j.hidden_field :start_date %>
+    <%= j.hidden_field :end_date %>
+  <% end %>
 <% end %>
