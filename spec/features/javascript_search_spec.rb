@@ -33,8 +33,6 @@ feature 'JavaScript search controller' do
     selector = find('#nd_employee_lookup_select_employee')
     selector.find('span.emp_sel_net_id', text: 'BMURPH22').click
 
-    pending "broken by switching to EmployeeJobs model,"
-    pending "it will have to stay broken until EmployeeJobs moves in here."
     expect(find('#jobs_list .employee_job')).to have_content 'There are no active jobs'
   end
 end
