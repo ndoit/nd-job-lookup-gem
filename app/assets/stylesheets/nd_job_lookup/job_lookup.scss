@@ -3,3 +3,8 @@
  * They will automatically be included in application.css.
  *= require nd_employee_lookup
  */
+
+.ajax-processing {
+  padding: 10px;
+  background: white  asset-data-url('ui-anim_basic_16x16.gif') right center no-repeat;
+}
