@@ -2,7 +2,7 @@ require "nd_job_lookup/engine"
 
 module NdJobLookup
   def self.root
-    File.expand_path(File.dirname(File.dirname(__FILE__))
+    File.expand_path(File.dirname(File.dirname(__FILE__)))
   end
 
   def self.models_dir
