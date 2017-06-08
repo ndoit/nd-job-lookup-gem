@@ -1,8 +1,8 @@
 GIT
   remote: git@bitbucket.org:nd-oit/nd-employee-lookup-gem.git
-  revision: ad1b0ce3b47b99198ed97b45395e059df2b10f1f
+  revision: 0d6fe221431dafab89b2f8f09aab26fb95124fd8
   specs:
-    nd_employee_lookup (0.2.9)
+    nd_employee_lookup (0.3.0)
       foundation-rails (~> 5.4.3.0)
       jquery-rails (~> 4.2.1)
       rails (~> 4.2.7.1)
@@ -18,10 +18,10 @@ GIT
 PATH
   remote: .
   specs:
-    nd_job_lookup (0.2.10)
+    nd_job_lookup (0.3.0)
       foundation-rails (~> 5.4.3.0)
       jquery-rails (~> 4.2.1)
-      nd_employee_lookup (~> 0.2.0)
+      nd_employee_lookup (~> 0.3.0)
       rails (~> 4.2.7.1)
       slim (~> 3.0.7)
       slim-rails (~> 3.1.1)
