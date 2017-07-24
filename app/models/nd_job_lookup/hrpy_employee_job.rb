@@ -1,5 +1,5 @@
 module NdJobLookup
-  class InvalidParams < StandardError; end
+  class Validation::InvalidParams < StandardError; end
   class HrpyEmployeeJob # < ActiveRecord::Base
     extend Validation
 
