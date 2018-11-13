@@ -11,7 +11,7 @@ div.large-12.medium-12.small-12.columns
           label Posn&nbsp;Orgn:
         div.large-8.small-9.columns
           span.job_orgn_code #{job['orgn_code']}
-          |  - 
+          |  -
           span.job_orgn_title #{job['orgn_title']}
     div.large-4.medium-5.small-12.columns
       div.row
@@ -28,7 +28,7 @@ div.large-12.medium-12.small-12.columns
         div.large-5.medium-4.small-3.columns
           label Last Paid:
         div.large-7.medium-8.small-9.columns
-          span.job_last_paid #{job['last_paid']}
+          span.job_last_paid #{job['last_paid'].try(:strftime, "%-m/%-d/%Y")}
       div.row
         div.large-5.medium-4.small-3.columns
           label Posn/Suffix:
