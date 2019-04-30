@@ -1,10 +1,12 @@
 GIT
   remote: git@bitbucket.org:nd-oit/nd-employee-lookup-gem.git
-  revision: ad6b616e62e44c6cfaf7386e75e7ed0d985c97b1
+  revision: d3dfa0132116544ca5d16fd372a4aab21d40239b
+  branch: release-0.5
   specs:
-    nd_employee_lookup (0.4.0)
+    nd_employee_lookup (0.4.5)
       foundation-rails (~> 5.4.3.0)
       jquery-rails (~> 4.2.1)
+      jquery-ui-rails (~> 6.0)
       rails (~> 4.2.7)
 
 PATH
@@ -90,6 +92,8 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (6.0.1)
+      railties (>= 3.2.16)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
