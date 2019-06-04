@@ -11,6 +11,13 @@
   <%= e.hidden_field :employee_status %>
   <%= e.hidden_field :ecls_code %>
   <%= e.hidden_field :employee_pict_code %>
+  <%= e.hidden_field :last_paid_date %>
+  <%= e.hidden_field :current_hire_date %>
+  <%= e.hidden_field :first_hire_date %>
+  <%= e.hidden_field :term_reason_code %>
+  <%= e.hidden_field :term_date %>
+  <%= e.hidden_field :adjusted_service_date %>
+  <%= e.hidden_field :seniority_date %>
   <%= e.fields_for :employee_jobs do |j| %>
     <%= j.hidden_field :title %>
     <%= j.hidden_field :orgn_code %>
