@@ -1,4 +1,4 @@
-class CreateNdJobLookupEmployeeJobs < ActiveRecord::Migration
+class CreateNdJobLookupEmployeeJobs < ActiveRecord::Migration[4.2]
   def change
     create_table :nd_job_lookup_employee_jobs do |t|
       t.integer :employee_id
